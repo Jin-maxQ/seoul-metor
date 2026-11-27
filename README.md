@@ -21,8 +21,6 @@
 
 实时到站数据已接入首尔开放数据 API。开发阶段请求写在 `utils/seoulApi.js`，正式发布时应迁移到云函数，并把密钥放在云端，不能长期放在前端代码。
 
-当前使用免费直连模式：小程序直接请求首尔 API，不需要微信云开发费用。开发者工具中需要勾选“不校验合法域名、TLS 版本以及 HTTPS 证书”。这种模式会暴露 API key，正式发布时可改用免费的 Cloudflare Worker 代理。
-
 Cloudflare Worker 代理代码位于 `cloudflare-worker/`。部署后，将 `utils/seoulApi.js` 中的 `WORKER_BASE_URL` 改成 `https://你的Worker名称.你的子域名.workers.dev`，即可切换为安全代理模式。
 
 站点选择器会从首尔官方 API 加载完整韩文站点列表；`data/stationTranslations.js` 按 API 的线路标识分组收录 799 条站点-线路中韩名称。翻译优先采用首尔交通公社多语言资料，并通过 `data/stationTranslationOverrides.js` 修正明显的机器误译（例如把地名误译成“全麦、真实性、朝鲜牛肉、手术”等）。未被官方中文资料覆盖的首都圈线路仍以机器翻译作为兜底，后续可继续按运营方资料复核。
