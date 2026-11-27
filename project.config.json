@@ -1,9 +1,10 @@
 {
   "description": "首都圈地铁助手 MVP",
-  "appid": "wx03c2580f1cdbe4e7",
+  "appid": "wxc61caae03b582012",
   "projectname": "capital-metro-helper",
   "compileType": "miniprogram",
   "miniprogramRoot": "./",
+  "cloudfunctionRoot": "cloudfunctions/",
   "libVersion": "3.4.0",
   "setting": {
     "urlCheck": false,
@@ -22,7 +23,7 @@
     "localPlugins": false,
     "disableUseStrict": false,
     "useCompilerPlugins": false,
-    "condition": false,
+    "condition": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -30,10 +31,14 @@
     }
   },
   "condition": {},
-  "simulatorPluginLibVersion": {},
+  "simulatorPluginLibVersion": {
+    "wxext14566970e7e9f62": "2.27.3"
+  },
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "editorSetting": {}
+  "editorSetting": {},
+  "isGameTourist": false,
+  "projectArchitecture": "multiPlatform"
 }
